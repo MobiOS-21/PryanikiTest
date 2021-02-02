@@ -7,10 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    var viewsInfo: [CellType: DataInfo] = [:]
+    var numberOfCells: [CellType] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         loadData()
     }
@@ -20,11 +26,55 @@ class ViewController: UIViewController {
         ViewDataService.instance.completionHandler { [weak self] (data, status, message) in
             guard let sself = self else { return }
             if status, let data = data {
-                print(data)
+                sself.createViewsList(info: data)
+                sself.tableView.reloadData()
             }
         }
     }
-
-
+    
+    private func createViewsList(info: JSONData) {
+        for view in info.view {
+            switch view {
+            case CellType.label.rawValue:
+                self.numberOfCells.append(.label)
+                self.viewsInfo[.label] = info.data.first(where: { $0.name == CellType.label.rawValue })
+            case CellType.selector.rawValue:
+                self.numberOfCells.append(.selector)
+                self.viewsInfo[.selector] = info.data.first(where: { $0.name == CellType.selector.rawValue  })
+            case CellType.image.rawValue:
+                self.numberOfCells.append(.image)
+                self.viewsInfo[.image] = info.data.first(where: { $0.name == CellType.image.rawValue })
+            default:
+                break
+            }
+        }
+    }
+    
+    //MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return numberOfCells.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch numberOfCells[indexPath.row] {
+        case .image:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageViewCell
+            cell.configureCell(with: viewsInfo[.image]?.data)
+            return cell
+        case .label:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! LabelCell
+            cell.textLabel?.text = viewsInfo[.label]?.data.text
+            return cell
+        case.selector:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SelectorCell", for: indexPath) as! SelectorCell
+            cell.configureCell(with: viewsInfo[.selector]?.data)
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if numberOfCells[indexPath.row] == .image { return 200 }
+        return UITableView.automaticDimension
+    }
 }
 

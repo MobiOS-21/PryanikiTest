@@ -32,19 +32,13 @@ class DataInfo: Codable {
 class DataClass: Codable {
     let text: String?
     let url: String?
-    let selectedID: Int?
+    let selectedId: Int?
     let variants: [Variant]?
-    
-    enum CodingKeys: String, CodingKey {
-        case text, url
-        case selectedID = "selectedId"
-        case variants
-    }
     
     init(text: String?, url: String?, selectedID: Int?, variants: [Variant]?) {
         self.text = text
         self.url = url
-        self.selectedID = selectedID
+        self.selectedId = selectedID
         self.variants = variants
     }
 }

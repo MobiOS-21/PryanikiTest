@@ -16,6 +16,9 @@
 		3AF7F2EE25C95AD4000A8453 /* ViewDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F2ED25C95AD4000A8453 /* ViewDataService.swift */; };
 		3AF7F2F825C95B9F000A8453 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F2F725C95B9F000A8453 /* Constants.swift */; };
 		3AF7F2FC25C95C50000A8453 /* JSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F2FB25C95C50000A8453 /* JSONData.swift */; };
+		3AF7F2FF25C96369000A8453 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F2FE25C96369000A8453 /* ImageViewCell.swift */; };
+		3AF7F30225C96384000A8453 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F30125C96384000A8453 /* LabelCell.swift */; };
+		3AF7F30525C96391000A8453 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F30425C96391000A8453 /* SelectorCell.swift */; };
 		8741BA7FFAD0C59D6A6A000A /* Pods_PryanikiTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0311F2C5573DBFC6535C7049 /* Pods_PryanikiTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		3AF7F2ED25C95AD4000A8453 /* ViewDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataService.swift; sourceTree = "<group>"; };
 		3AF7F2F725C95B9F000A8453 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3AF7F2FB25C95C50000A8453 /* JSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONData.swift; sourceTree = "<group>"; };
+		3AF7F2FE25C96369000A8453 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		3AF7F30125C96384000A8453 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		3AF7F30425C96391000A8453 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
 		AC8B9DFC7A6EEDB51397B6C9 /* Pods-PryanikiTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PryanikiTest.debug.xcconfig"; path = "Target Support Files/Pods-PryanikiTest/Pods-PryanikiTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +116,9 @@
 			children = (
 				3AF7F2DC25C95974000A8453 /* LaunchScreen.storyboard */,
 				3AF7F2D725C95973000A8453 /* Main.storyboard */,
+				3AF7F2FE25C96369000A8453 /* ImageViewCell.swift */,
+				3AF7F30125C96384000A8453 /* LabelCell.swift */,
+				3AF7F30425C96391000A8453 /* SelectorCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF7F2F825C95B9F000A8453 /* Constants.swift in Sources */,
+				3AF7F30525C96391000A8453 /* SelectorCell.swift in Sources */,
+				3AF7F2FF25C96369000A8453 /* ImageViewCell.swift in Sources */,
+				3AF7F30225C96384000A8453 /* LabelCell.swift in Sources */,
 				3AF7F2D625C95973000A8453 /* ViewController.swift in Sources */,
 				3AF7F2D225C95973000A8453 /* AppDelegate.swift in Sources */,
 				3AF7F2EE25C95AD4000A8453 /* ViewDataService.swift in Sources */,
