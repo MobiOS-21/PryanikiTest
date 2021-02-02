@@ -73,8 +73,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if numberOfCells[indexPath.row] == .image { return 200 }
-        return UITableView.automaticDimension
+        switch numberOfCells[indexPath.row] {
+        case .image:
+            return 200
+        case .selector:
+            return CGFloat((viewsInfo[.selector]?.data.variants?.count ?? 0) * 50)
+        default:
+            return UITableView.automaticDimension
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cellInfo = viewsInfo[numberOfCells[indexPath.row]] else { return }
+        print("select cell with type: \(cellInfo.name)")
     }
 }
 

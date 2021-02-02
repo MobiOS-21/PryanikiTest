@@ -19,6 +19,7 @@
 		3AF7F2FF25C96369000A8453 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F2FE25C96369000A8453 /* ImageViewCell.swift */; };
 		3AF7F30225C96384000A8453 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F30125C96384000A8453 /* LabelCell.swift */; };
 		3AF7F30525C96391000A8453 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F30425C96391000A8453 /* SelectorCell.swift */; };
+		3AF7F30825C9A735000A8453 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF7F30725C9A735000A8453 /* CheckBox.swift */; };
 		8741BA7FFAD0C59D6A6A000A /* Pods_PryanikiTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0311F2C5573DBFC6535C7049 /* Pods_PryanikiTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		3AF7F2FE25C96369000A8453 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		3AF7F30125C96384000A8453 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		3AF7F30425C96391000A8453 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
+		3AF7F30725C9A735000A8453 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		AC8B9DFC7A6EEDB51397B6C9 /* Pods-PryanikiTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PryanikiTest.debug.xcconfig"; path = "Target Support Files/Pods-PryanikiTest/Pods-PryanikiTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 				3AF7F2FE25C96369000A8453 /* ImageViewCell.swift */,
 				3AF7F30125C96384000A8453 /* LabelCell.swift */,
 				3AF7F30425C96391000A8453 /* SelectorCell.swift */,
+				3AF7F30725C9A735000A8453 /* CheckBox.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				3AF7F30525C96391000A8453 /* SelectorCell.swift in Sources */,
 				3AF7F2FF25C96369000A8453 /* ImageViewCell.swift in Sources */,
 				3AF7F30225C96384000A8453 /* LabelCell.swift in Sources */,
+				3AF7F30825C9A735000A8453 /* CheckBox.swift in Sources */,
 				3AF7F2D625C95973000A8453 /* ViewController.swift in Sources */,
 				3AF7F2D225C95973000A8453 /* AppDelegate.swift in Sources */,
 				3AF7F2EE25C95AD4000A8453 /* ViewDataService.swift in Sources */,

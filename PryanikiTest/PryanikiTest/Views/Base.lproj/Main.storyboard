@@ -60,7 +60,22 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZWR-gp-jwo" id="ROe-M1-cLf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1RO-Gd-rip">
+                                                    <rect key="frame" x="5" y="0.0" width="404" height="43.5"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1RO-Gd-rip" firstAttribute="top" secondItem="ROe-M1-cLf" secondAttribute="top" id="Hcm-zE-FDs"/>
+                                                <constraint firstItem="1RO-Gd-rip" firstAttribute="centerX" secondItem="ROe-M1-cLf" secondAttribute="centerX" id="Oua-pN-EkS"/>
+                                                <constraint firstAttribute="bottom" secondItem="1RO-Gd-rip" secondAttribute="bottom" id="Sfe-Ex-7Rb"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1RO-Gd-rip" secondAttribute="trailing" constant="5" id="tDV-BW-TbG"/>
+                                                <constraint firstItem="1RO-Gd-rip" firstAttribute="leading" secondItem="ROe-M1-cLf" secondAttribute="leading" constant="5" id="xVC-S5-Tms"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stackView" destination="1RO-Gd-rip" id="UNQ-ic-akX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
